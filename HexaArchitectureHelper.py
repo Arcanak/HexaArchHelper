@@ -1,4 +1,5 @@
 import os
+import file_maker.file_maker as fm
 
 curPath = os.curdir
 def create_hexa_arch(name: str, path: str):
@@ -32,7 +33,6 @@ def create_hexa_arch(name: str, path: str):
     os.mkdir(folder + "/infrastructure/adapters/output/eventPublisher/")
 
     os.mkdir(folder + "/infrastructure/adapters/output/customizedException/data/")
-    os.mkdir(folder + "/infrastructure/adapters/output/customizedException/data/")
 
     os.mkdir(folder + "/infrastructure/adapters/output/persistence/dto")
     os.mkdir(folder + "/infrastructure/adapters/output/persistence/mapper")
@@ -47,10 +47,15 @@ def create_hexa_arch(name: str, path: str):
 
 
 def main():
-    path = "C:\\Users\\Bryan\\Desktop\\Proyectos\\Ecovinal\\erp-back\\src\\main\\java\\com\\ecovinal\\erp\\bundles\\silicie\\bundles"
+    path = "/home/bryan/Escritorio/Proyectos/Ecovinal/erp-back/src/main/java/com/ecovinal/erp/bundles/silicie/bundles"
     print("Insert the name of the folder:")
     name = input()
     create_hexa_arch(name, path)
+    # Make files
+    new_path = path + "/" + name
+    fm.make_app_ports(name, new_path)
+    fm.make_domain(name, new_path)
+    fm.make_infrastructure(name, new_path)
 
 if __name__ == '__main__':
     main()

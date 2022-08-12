@@ -1,5 +1,5 @@
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class $ModelRestAdapter {
+public class $modelRestAdapter {
 }

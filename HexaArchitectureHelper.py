@@ -23,7 +23,7 @@ def create_hexa_arch(name: str, path: str):
     os.mkdir(folder + "/infraestructure/adapters/input/rest/mapper")
     os.mkdir(folder + "/infraestructure/adapters/output/customizedException/data/response")
     os.mkdir(folder + "/infraestructure/adapters/output/eventPublisher")
-    os.mkdir(folder + "/infraestructure/adapters/output/persistence/entity")
+    os.mkdir(folder + "/infraestructure/adapters/output/persistence/dto")
     os.mkdir(folder + "/infraestructure/adapters/output/persistence/mapper")
     os.mkdir(folder + "/infraestructure/adapters/output/persistence/repository")
     os.mkdir(folder + "/domain/event")
